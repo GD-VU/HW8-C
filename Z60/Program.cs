@@ -10,10 +10,6 @@ int y = num("максимальное рандомное число");
 int[,,] array = new int[i, j, h];
 FillArray(array, x, y + 1);
 PrintArray(array);
-// System.Console.WriteLine();
-// ArrangeArray(array);
-// PrintArray(array);
-
 
 // Выбор длин массива
 int num(string u)
@@ -40,15 +36,15 @@ void FillArray(int[,,] matrix, int a, int b)
 // Печать массива
 void PrintArray(int[,,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int h = 0; h < matrix.GetLength(2); h++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            for (int h = 0; h < matrix.GetLength(2); h++)
+            for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 System.Console.Write($"{matrix[i, j, h]}({i},{j},{h}) ");
             }
+            System.Console.WriteLine();
         }
-        System.Console.WriteLine();
     }
 }
